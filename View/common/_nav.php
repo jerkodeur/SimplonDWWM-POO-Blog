@@ -8,10 +8,10 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link <?php if (str_contains($_GET['page'], 'post') || !isset($_GET['page'])) echo 'active' ?>" href="index.php">Accueil</a>
+                    <a class="nav-link <?php if (isset($_GET['page']) && str_contains($_GET['page'], 'post') || !isset($_GET['page'])) echo 'active' ?>" href="index.php">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php if ($_GET['page'] === 'connexion') echo 'active' ?>" href="?page=connexion">Connexion</a>
+                    <a class="nav-link <?php if (isset($_GET['page']) && $_GET['page'] === 'connexion') echo 'active' ?>" href="?page=connexion">Connexion</a>
                 </li>
         </div>
     </div>
